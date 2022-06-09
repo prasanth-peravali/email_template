@@ -27,4 +27,19 @@ class EmailController extends Controller
         }
         
     }
+    public function createTemplate()
+    {
+        return view('emails.create-template');
+    }
+
+    public function storeTemplate(Request $request)
+    {
+        EmailTemplate::create([
+            'title' => $request->title,
+            'email_subject' => $request->email_subject,
+            'email_body' => $request->email_body,
+        ]);
+        return redirect()->route('dashboard');
+    }
+
 }
