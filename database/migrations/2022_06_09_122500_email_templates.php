@@ -18,7 +18,7 @@ class EmailTemplates extends Migration
             $table->string('title')->nullable();
             $table->string('email_subject')->nullable();
             $table->longText('email_body')->nullable();
-            $table->timestamp('failed_at')->useCurrent();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +29,6 @@ class EmailTemplates extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('email_templates');
     }
 }
