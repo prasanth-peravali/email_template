@@ -9,7 +9,7 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
-            <a class="btn btn-primary" href="{{route('create.template')}}">back</a>
+            <a class="btn btn-primary" href="{{route('dashboard')}}">back</a>
         </h2>
     </x-slot>
 
