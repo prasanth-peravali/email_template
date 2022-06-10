@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\GoogleSocialiteController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +39,6 @@ Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle']
 Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback']);
 Route::get('create-template', [EmailController::class, 'createTemplate'])->name('create.template');
 Route::post('create-template', [EmailController::class, 'storeTemplate'])->name('store.template');
+
+Route::get('login/github', [LoginController::class, 'redirectToProvider']);
+Route::get('login/github/callback', [LoginController::class, 'handleProviderCallback']);

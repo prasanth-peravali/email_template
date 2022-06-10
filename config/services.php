@@ -34,5 +34,10 @@ return [
         'client_secret' => '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',
         'redirect' => 'http://127.0.0.1:8000/callback/google',
     ],
+    'github' => [
+        'client_id' => env('GITHUB_CLIENT_ID'),
+        'client_secret' => env('GITHUB_CLIENT_SECRET'),
+        'redirect' => env('GITHUB_CALLBACK'),
+    ],
 
 ];
